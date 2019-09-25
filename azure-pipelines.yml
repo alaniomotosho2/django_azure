@@ -13,8 +13,12 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+steps:
+- script: ls
+  displayName: 'checking working directory'
+
 - script: |
-    python -m pip install --upgrade pip setuptools wheel
+    python3 -m pip install --upgrade pip setuptools wheel
 - script: |
     pip install pipenv
   displayName: 'Install pipenv'
