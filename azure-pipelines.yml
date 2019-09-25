@@ -23,14 +23,7 @@ steps:
     pip install pipenv
   displayName: 'Install pipenv'
 
-- script: |
-    pipenv shell
-  displayName: 'pipenv shell'
 
-- script: |
-    pipenv install
-    pip install unittest-xml-reporting
-  displayName: 'pipenv install'
 
 - script: |
     pipenv install unittest-xml-reporting
