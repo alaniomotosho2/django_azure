@@ -13,8 +13,8 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: ls
-  displayName: 'checking working directory'
+- script: cd ..
+  displayName: 'goto where piplock is'
 
 - script: |
     python3 -m pip install --upgrade pip setuptools wheel
@@ -26,7 +26,6 @@ steps:
     pipenv shell
   displayName: 'pipenv shell'
 
-
 - script: |
     pipenv install
     pip install unittest-xml-reporting
@@ -35,6 +34,9 @@ steps:
 - script: |
     pipenv install unittest-xml-reporting
   displayName: 'unit test'
+  
+- script: cd django_azure/
+  displayName: 'goto where piplock is'
 
 
 - script: |
