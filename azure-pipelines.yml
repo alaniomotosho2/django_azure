@@ -13,24 +13,20 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-
-- script: ls
-  displayName: 'goto where piplock is'
-
 - script: |
-    python3 -m pip install --upgrade pip setuptools wheel
+    python3 -m pip3 install --upgrade pip3 setuptools wheel
 
 
-- script: pip install -r requirements.txt
+- script: pip3 install -r requirements.txt
   displayName: 'Install requirements'
 
 - script: |
-    pip install unittest-xml-reporting
+    pip3 install unittest-xml-reporting
   displayName: 'unit test'
 
 
 - script: |
-    python manage.py test app
+    python3 manage.py test app
   displayName: 'Run tests'
 
 - script: |
