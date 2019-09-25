@@ -19,14 +19,18 @@ steps:
 
 - script: |
     python3 -m pip install --upgrade pip setuptools wheel
+
+- script: pip install pipenv
+  displayName: 'Install Pipenv'
+
+- script: python -m pipenv lock -r > requirements.txt
+  displayName: 'Create requirements.txt from Pipfile'
+
+- script: pip install -r requirements.txt
+  displayName: 'Install requirements.txt'
+
 - script: |
-    pip install pipenv
-  displayName: 'Install pipenv'
-
-
-
-- script: |
-    pipenv install unittest-xml-reporting
+    pip install unittest-xml-reporting
   displayName: 'unit test'
 
 
