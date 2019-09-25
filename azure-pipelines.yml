@@ -22,7 +22,7 @@ steps:
 
 
 - script: pip install -r requirements.txt
-  displayName: 'Install requirements.txt'
+  displayName: 'Install requirements'
 
 - script: |
     pip install unittest-xml-reporting
