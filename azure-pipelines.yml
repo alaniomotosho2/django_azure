@@ -13,8 +13,6 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: cd ..
-  displayName: 'goto where piplock is'
 
 - script: ls
   displayName: 'goto where piplock is'
@@ -37,9 +35,6 @@ steps:
 - script: |
     pipenv install unittest-xml-reporting
   displayName: 'unit test'
-
-- script: cd django_azure/
-  displayName: 'goto where piplock is'
 
 
 - script: |
