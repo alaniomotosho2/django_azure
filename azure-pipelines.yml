@@ -15,11 +15,24 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
+- script: |
     pip install pipenv
+  displayName: 'Install pipenv'
+
+- script: |
     pipenv shell
+  displayName: 'pipenv shell'
+
+
+- script: |
     pipenv install
     pip install unittest-xml-reporting
-  displayName: 'Install Prerequisite'
+  displayName: 'pipenv install'
+
+- script: |
+    pipenv install unittest-xml-reporting
+  displayName: 'unit test'
+
 
 - script: |
     python manage.py test app
