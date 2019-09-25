@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    python3 -m pip3 install --upgrade pip setuptools wheel
+    python3 -m pip install --upgrade pip setuptools wheel
 
 
 - script: pip install -r requirements.txt
