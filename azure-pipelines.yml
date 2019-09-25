@@ -17,11 +17,11 @@ steps:
     python3 -m pip3 install --upgrade pip setuptools wheel
 
 
-- script: pip3 install -r requirements.txt
+- script: pip install -r requirements.txt
   displayName: 'Install requirements'
 
 - script: |
-    pip3 install unittest-xml-reporting
+    pip install unittest-xml-reporting
   displayName: 'unit test'
 
 
